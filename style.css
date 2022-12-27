@@ -15,7 +15,7 @@ body {
 
 .container {
   width: 40%;
-  min-height: 350px;
+  min-height: 250px;
   flex-direction: column;
   padding: 10px;
   background-color: white;
@@ -30,7 +30,7 @@ body {
 
 .task-item input {
   width: 90%;
-  height: 43px;
+  height: 40px;
   font-size: 16px;
   border: 1px solid #eee;
   outline: none;
@@ -44,26 +44,46 @@ button {
   border: none;
   background-color: #b0ebbd;
   padding: 10px;
-  border-radius: 7px;
+  border-radius: 5px;
   cursor: pointer;
   transition: 350ms;
 }
 
-button:hover {
+button:hover,
+.tasks-item i:hover {
   background-color: #52ce6d;
 }
 
 .new-task-container {
-  width: 100%;
-  padding: 20px 20px;
-  margin-top: 20px;
-  background-color: #f5f4f4;
-  border: 1px solid #eee;
-  border-radius: 7px;
+  background-color: #fff;
+  margin-top: 30px;
 }
 
 .tasks-item {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background-color: #eee;
+  border-radius: 7px;
+}
+
+.tasks-item p {
+  padding-left: 10px;
+  flex: 1;
+}
+
+.tasks-item i {
+  background-color: #b0ebbd;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 350ms;
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
 }

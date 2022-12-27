@@ -24,19 +24,16 @@
     <div class="container">
       <h1>Minhas Tarefas</h1>
       <div class="task-item">
-        <input class="todo-input" type="text" placeholder="Adicionar tarefa" />
-        <button type="submit">
+        <input
+          class="new-task-input"
+          type="text"
+          placeholder="Adicionar tarefa"
+        />
+        <button id="submit" class="new-task-button" type="submit">
           <i class="fa-thin fa-plus"></i>
         </button>
       </div>
-      <div class="new-task-container">
-        <div class="tasks-item">
-          <p>Adicionar item</p>
-          <button id="deleteBtn" type="submit">
-            <i class="far fa-trash-alt"></i>
-          </button>
-        </div>
-      
+      <div class="new-task-container"></div>
     </div>
 
     <script src="main.js"></script>

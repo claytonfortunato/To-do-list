@@ -3,8 +3,6 @@ const todoInput = document.querySelector(".new-task-input");
 
 const tasksContainer = document.querySelector(".new-task-container");
 
-const validateInput = () => todoInput.value.trim().length > 0;
-
 const handleAddTask = () => {
   const taskItemContainer = document.createElement("div");
   taskItemContainer.classList.add("tasks-item");
@@ -34,6 +32,14 @@ const handleAddTask = () => {
 
   todoInput.value = "";
   todoInput.focus();
+};
+
+const dragAndDrop = () => {
+  const dropZone = document.querySelectorAll(".new-task-container div p");
+
+  dropZone.addEventListener("dragstart", (e) => {
+    console.log(e);
+  });
 };
 
 const handleDoneClick = (doneItem) => {
@@ -66,4 +72,9 @@ document.addEventListener("keypress", (e) => {
 
     keyEnter.click();
   }
+});
+
+new Sortable(tasksContainer, {
+  animation: 350,
+  ghostClass: "blue-background-class",
 });
